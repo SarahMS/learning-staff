@@ -2,7 +2,7 @@ import graphlab
 # Limit number of worker processes. This preserves system memory, which prevents hosted notebooks from crashing.
 graphlab.set_runtime_config('GRAPHLAB_DEFAULT_NUM_PYLAMBDA_WORKERS', 4)
 #import eCommerce items Data
-foods = graphlab.SFrame.read_csv('C:\Users\Jihed Mestiri\Desktop\Reviews.csv')
+foods = graphlab.SFrame.read_csv('\Reviews.csv')
 foods.head()
 #count the words in each item description
 foods['word_count'] = graphlab.text_analytics.count_words(foods['Text'])
